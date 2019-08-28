@@ -1,0 +1,12 @@
+<div class="page page-news">
+  <ng-container *ngIf="news$ | async as news;else loader">
+    <app-new *ngFor="let item of news" [item]="item"></app-new>
+  </ng-container>
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+</div>
+
+
+
+

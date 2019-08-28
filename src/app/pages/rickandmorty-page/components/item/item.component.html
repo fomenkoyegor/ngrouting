@@ -1,0 +1,36 @@
+<!--<div class="item">-->
+<!--  <h2>{{item.id}}</h2>-->
+<!--  <p>{{item.name}}</p>-->
+<!--  <img src="{{item.image}}" width="100%" alt="{{item.name}}"-->
+<!--       routerLink="/rickandmorty/person/{{item.id}}">-->
+<!--  -->
+<!--</div>-->
+
+
+<div class="item">
+
+  <div class="item__name">
+    {{item.name}}
+  </div>
+
+  <div class="item__status">
+    <span>status</span>
+    <div class="item-staus-indicator" [class.alive]="item.status=='Alive'"></div>
+  </div>
+
+  <div class="item__species">
+    <span>species</span>
+    <span>{{item.species}}</span>
+  </div>
+
+
+  <div class="item__gender">
+    <span>gender</span>
+    <span>{{item.gender}}</span>
+  </div>
+
+  <img src="{{item.image}}" alt="{{item.name}}" class="item__image"
+       routerLink="/rickandmorty/person/{{item.id}}"
+  >
+
+</div>

@@ -1,0 +1,51 @@
+<div class="planet planet-pages" *ngIf="pages">
+  <h2 class="name">
+    {{planet.name}}
+  </h2>
+  <img class="image"
+       src="{{planet.image}}"
+       alt="{{planet.name}}"
+       routerLink="/swapi/planets/{{planet.id}}"
+  >
+</div>
+
+
+<div class="planet planet-page" *ngIf="page">
+  <div class="info">
+
+    <h2 class="name">
+      {{planet.name}}
+    </h2>
+
+    <p class="flex">
+      <span>population</span>
+      <span>{{planet.population}}</span>
+    </p>
+
+    <p class="flex">
+      <span>gravity</span>
+      <span>{{planet.gravity}}</span>
+    </p>
+
+    <p class="flex">
+      <span>diameter</span>
+      <span>{{planet.diameter}}</span>
+    </p>
+
+    <p class="flex">
+      <span>rotation period</span>
+      <span>{{planet.rotation_period}}</span>
+    </p>
+
+    <app-residents [residents]="planet.residents"></app-residents>
+
+  </div>
+
+  <img class="image"
+       src="{{planet.image}}"
+       alt="{{planet.name}}"
+       routerLink="/swapi/planets/{{planet.id}}"
+  >
+
+
+</div>

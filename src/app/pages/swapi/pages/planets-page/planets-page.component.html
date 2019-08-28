@@ -1,0 +1,23 @@
+<div class="page page-planets"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onGetPlanets()"
+     [scrollWindow]="false"
+     *ngIf="swapiService.planets$ | async as planets"
+>
+
+    <ng-container *ngIf="planets.length;else loader">
+    <app-planet-card *ngFor="let planet of planets"
+                      [planet]="planet"
+                      [pages]="true"
+    >
+    </app-planet-card>
+    </ng-container>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+
+
+</div>

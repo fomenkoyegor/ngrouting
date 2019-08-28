@@ -1,0 +1,21 @@
+<div class="page">
+
+  <app-paginate [page]="page"></app-paginate>
+
+  <div class="page-persons">
+    <ng-container *ngIf="charactresr$ | async as items;else loader">
+      <div class="items" *ngFor="let item of items">
+        <app-item [item]="item"></app-item>
+      </div>
+    </ng-container>
+
+
+    <ng-template #loader>
+      <app-loader></app-loader>
+    </ng-template>
+  </div>
+
+  <app-paginate [page]="page"></app-paginate>
+
+</div>
+

@@ -1,0 +1,11 @@
+<div class="page page-planet">
+  <ng-container *ngIf="planet$ | async as planet;else loader">
+    <app-planet-card [planet]="planet" [page]="true"></app-planet-card>
+  </ng-container>
+  
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+  
+  
+</div>

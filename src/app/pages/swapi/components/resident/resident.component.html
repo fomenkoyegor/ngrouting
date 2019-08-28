@@ -1,0 +1,8 @@
+<div class="resident">
+  <ng-container *ngIf="people$ | async as people;else loader">
+    <app-people-card [item]="people"></app-people-card>
+  </ng-container>
+  <ng-template #loader>
+    <p>....</p>
+  </ng-template>
+</div>

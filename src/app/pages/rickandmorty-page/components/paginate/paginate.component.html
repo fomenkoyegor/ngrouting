@@ -1,0 +1,81 @@
+<div class="buttons" *ngIf="page">
+
+  <!--  <div>-->
+  <!--    currentPage: {{page}}-->
+  <!--  </div>-->
+
+  <nav>
+    <ul *ngIf="pages">
+
+      <li>
+        <a routerLink="/rickandmorty/page/{{page-1}}"
+           *ngIf="page>1"
+           [class.no-active]="page<=1"
+        >&laquo;</a>
+        <a
+          *ngIf="page<=1"
+          [class.no-active]="page<=1"
+        >&laquo;</a>
+      </li>
+
+      <li *ngIf="+page>3">
+        <a routerLink="/rickandmorty/page/1">1</a>
+      </li>
+      <li *ngIf="+page>4">
+        <a routerLink="/rickandmorty/page/2">2</a>
+      </li>
+      <li *ngIf="+page>3">
+        <a>...</a>
+      </li>
+
+      <li *ngIf="+page>2">
+        <a routerLink="/rickandmorty/page/{{page-2}}">{{page - 2}}</a>
+      </li>
+      <li *ngIf="+page>1">
+        <a routerLink="/rickandmorty/page/{{page-1}}">{{page - 1}}</a>
+      </li>
+      <li>
+        <a [class.active]="page"
+        >{{page}}</a>
+      </li>
+      <li *ngIf="+page+1<rickandmortyService.pages">
+        <a routerLink="/rickandmorty/page/{{+page+1}}">{{+page + 1}}</a>
+      </li>
+      <li *ngIf="+page+2<rickandmortyService.pages">
+        <a routerLink="/rickandmorty/page/{{+page+2}}">{{+page + 2}}</a>
+      </li>
+
+
+      <li *ngIf="+page+2<rickandmortyService.pages">
+        <a>...</a>
+      </li>
+
+      <li *ngIf="+page+3<rickandmortyService.pages">
+        <a routerLink="/rickandmorty/page/{{rickandmortyService.pages-1}}">
+          {{rickandmortyService.pages-1}}
+        </a>
+      </li>
+
+      <li *ngIf="+page+2<rickandmortyService.pages">
+        <a routerLink="/rickandmorty/page/{{rickandmortyService.pages}}">
+          {{rickandmortyService.pages}}
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/rickandmorty/page/{{+page+1}}"
+           *ngIf="page<25"
+           [class.no-active]="page>=rickandmortyService.pages"
+        >&raquo;</a>
+        <a
+          *ngIf="page>=rickandmortyService.pages"
+          [class.no-active]="page>=rickandmortyService.pages"
+        >&raquo;</a>
+
+      </li>
+
+
+    </ul>
+  </nav>
+
+</div>

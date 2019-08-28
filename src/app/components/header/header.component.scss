@@ -1,0 +1,39 @@
+header{
+  background-color: var(--dark);
+  height: var(--header);
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 400px){
+    &{
+      height: var(--header-mobile);
+    }
+  }
+}
+
+
+nav{
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  flex-wrap: wrap;
+}
+
+ul{
+  display: flex;
+  li{
+    padding: 0.5em;
+    a{
+      color: var(--color-ligth);
+      padding: 0.1em;
+      border-bottom: 1px transparent solid;
+      transition: 0.45s linear color;
+      &.active,&:hover{
+        border-bottom: 1px solid var(--color-active);
+        color: var(--color-active);
+      }
+    }
+  }
+}

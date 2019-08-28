@@ -1,0 +1,6 @@
+.page-person{
+  height: calc(100vh - var(--header));
+  display: grid;
+  grid-template-columns: 1fr;
+
+}

@@ -1,0 +1,11 @@
+.page-persons {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1em;
+  grid-gap: 1em;
+  padding: 0.4em;
+  @media screen and (max-width: 800px){
+    grid-template-columns: 1fr;
+  }
+}

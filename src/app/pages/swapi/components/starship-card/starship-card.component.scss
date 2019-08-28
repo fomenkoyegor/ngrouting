@@ -1,0 +1,23 @@
+.starship.page{
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  height: calc(100vh - var(--header));
+  .info{
+    text-align: right;
+    padding: 0.2em;
+  }
+  h2{
+    background-color: var(--color-active);
+    padding: 0.4em;
+  }
+  h3{
+    color: var(--color-danger);
+  }
+  p{
+    color: var(--color-ligth);
+  }
+  img{
+    display: block;
+    background-color: var(--color-opaciti-dark);
+  }
+}

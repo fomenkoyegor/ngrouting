@@ -1,0 +1,20 @@
+.page-planets{
+  width: 100%;
+  overflow-y: scroll;
+  height: calc(100vh - var(--header));
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  padding: 1em;
+  grid-gap: 1em;
+  @media screen and (max-width: 400px){
+    &{
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+app-planet-card{
+  width: 100%;
+  height: 100%;
+}

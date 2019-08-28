@@ -1,0 +1,9 @@
+<div class="residents">
+  <ng-container *ngIf="residents;else loader">
+    <app-resident *ngFor="let resident of residents" [resident]="resident"></app-resident>
+  </ng-container>
+
+  <ng-template #loader>
+    <p> people ....</p>
+  </ng-template>
+</div>

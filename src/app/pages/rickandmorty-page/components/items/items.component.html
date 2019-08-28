@@ -1,0 +1,17 @@
+<div class="items" *ngIf="rickandmortyService.charackters$ | async as items;else loader"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onScroll()"
+     [scrollWindow]="false"
+>
+  <app-item *ngFor="let item of items" [item]="item" class="scroll"></app-item>
+</div>
+
+
+
+
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
+

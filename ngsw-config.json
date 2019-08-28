@@ -1,0 +1,62 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/*.css",
+          "/*.js"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/**"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "news-api",
+      "urls": [
+        "https://newsapi.org/v2/*",
+        "https://rickandmortyapi.com/api/*",
+        "https://swapi.co/api/*",
+
+        "https://swapi.co/api/people/*",
+        "https://swapi.co/api/planets/*",
+        "https://swapi.co/api/films/*",
+        "https://swapi.co/api/species/*",
+        "https://swapi.co/api/vehicles/*",
+        "https://swapi.co/api/starships/*",
+
+
+        "https://starwars-visualguide.com/assets/img/*",
+        "https://starwars-visualguide.com/assets/img/characters/*",
+        "https://starwars-visualguide.com/assets/img/planets/*",
+        "https://starwars-visualguide.com/assets/img/starships/*"
+
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxAge": "1h",
+        "maxSize": 50,
+        "timeout": "5s"
+      }
+    }
+  ]
+}

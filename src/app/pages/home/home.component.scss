@@ -1,0 +1,16 @@
+.page-home{
+  display: flex;
+  height: 100vh;
+}
+
+.news,.news-output{
+  border: 1px solid;
+}
+
+.news{
+  width: 30%
+}
+
+.news-output{
+  width: 70%
+}

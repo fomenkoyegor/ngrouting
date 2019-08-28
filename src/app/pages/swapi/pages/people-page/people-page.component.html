@@ -1,0 +1,17 @@
+<div class="page page-people"
+     *ngIf="swapiService.people$ | async as people"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onGetPeople()"
+     [scrollWindow]="false"
+>
+  <ng-container *ngIf="people.length;else loader">
+    <app-people-card *ngFor="let p of people" [item]="p"></app-people-card>
+  </ng-container>
+
+ <ng-template #loader>
+   <app-loader></app-loader>
+ </ng-template>
+
+</div>

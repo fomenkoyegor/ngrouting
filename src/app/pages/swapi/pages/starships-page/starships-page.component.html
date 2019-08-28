@@ -1,0 +1,20 @@
+<div class="page page-starships"
+     infiniteScroll
+     [infiniteScrollDistance]="2"
+     [infiniteScrollThrottle]="50"
+     (scrolled)="onGetStarships()"
+     [scrollWindow]="false"
+     *ngIf="swapiService.starships$ | async as starships"
+>
+  <ng-container *ngIf="starships.length;else loader">
+    <app-starship-card *ngFor="let starship of starships"
+                       [starship]="starship"
+                       [pages]="true"
+    ></app-starship-card>
+  </ng-container>
+
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+</div>

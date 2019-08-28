@@ -1,0 +1,10 @@
+.new-list{
+  height: 100vh;
+  overflow-y: scroll;
+  padding-bottom: 150px;
+  width: 100%;
+  &__item.active{
+    background-color: var(--color-active-link);
+    color: var(--color-ligth);
+  }
+}

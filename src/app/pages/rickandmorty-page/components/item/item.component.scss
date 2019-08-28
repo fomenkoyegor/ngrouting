@@ -1,0 +1,121 @@
+
+:host-context(.scroll){
+  .item{
+    &__status,&__species,&__gender{
+      display: none;
+    }
+  }
+}
+
+:host-context(.person){
+  .item{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+      "image name"
+      "image status"
+      "image species"
+      "image gender";
+    &__status,&__species,&__gender{
+      justify-content: center;
+      &>*{
+        margin-right: 0.45em;
+      }
+    }
+    @media screen  and (max-width: 800px){
+       &{
+         grid-template-columns: 2fr 1fr;
+         &__status,&__species,&__gender{
+           flex-wrap: wrap;
+         }
+       }
+    }
+
+  }
+
+  .item:hover{
+    transform: none;
+    box-shadow: 1px 1px 15px var(--color-opaciti-dark);
+    background-color: var(--color-ligth) ;
+    color: var(--dark);
+  }
+}
+
+
+.item>*{
+  padding: 0.4em;
+}
+
+
+.item{
+  box-shadow: 1px 1px 5px var(--color-opaciti-dark);
+  padding: 0.45em;
+  margin-bottom: 1em;
+  transition: 0.34s ease-in-out;
+  &:hover{
+    transform: scale(1.02);
+    box-shadow: 1px 1px 15px var(--color-active);
+    background-color: var(--dark);
+    color: var(--color-ligth);
+  }
+}
+
+
+
+
+
+.item__name {
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  grid-area: name;
+}
+
+
+.item__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: status;
+}
+
+.item__species{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: species;
+}
+
+.item__gender{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: gender;
+}
+
+
+.item__image{
+  width: 100%;
+  display: block;
+  min-height: 250px;
+  background-color: var(--color-opaciti-dark);
+  padding: 0!important;
+  cursor: pointer;
+  grid-area: image;
+}
+
+.item-staus-indicator {
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--color-danger);
+  box-shadow: 1px 1px 15px var(--color-opaciti-dark);
+
+  &.alive {
+    background-color: var(--color-alive);
+  }
+}
+
+
+

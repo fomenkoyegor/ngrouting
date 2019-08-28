@@ -1,0 +1,19 @@
+<ng-container *ngIf="item;else empty">
+  <div
+    routerLinkActive="active"
+    routerLink="news/{{item.id}}"
+    class="new-item">
+    <h4>{{item.name}}</h4>
+    <p>{{item.category}} ({{item.country}})</p>
+  </div>
+</ng-container>
+
+<ng-template #empty>
+  <div routerLinkActive="active"
+       routerLink="news"
+       [routerLinkActiveOptions]="{exact:true}"
+       class="new-item"
+  >
+    <h4>TOP</h4>
+  </div>
+</ng-template>

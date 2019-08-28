@@ -1,0 +1,21 @@
+.new{
+  padding: 1em;
+  box-shadow: 1px 1px 1px 1px var(--light);
+  margin-bottom: 1em;
+  break-inside: avoid;
+  h2 a{
+    color: var(--color-active);
+  }
+  h2,h3{
+    text-align: center;
+  }
+  .img{
+    margin-top: 1em;
+    width: 100%;
+    min-height: 65vh;
+    background-color: var(--light);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

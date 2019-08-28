@@ -1,0 +1,57 @@
+<div class="card">
+
+  <div class="card__info">
+
+    <div class="card__name">
+      <span>name</span>
+      <span>{{people.name}}</span>
+    </div>
+
+    <div class="card__name">
+      <span>height</span>
+      <span>{{people.height}}</span>
+    </div>
+
+
+    <div class="card__name">
+      <span>mass</span>
+      <span>{{people.mass}}</span>
+    </div>
+
+
+    <div class="card__name">
+      <span>hair color</span>
+      <span>{{people.hair_color}}</span>
+    </div>
+
+
+    <div class="card__name">
+      <span>skin color</span>
+      <span>{{people.skin_color}}</span>
+    </div>
+
+
+    <div class="card__name">
+      <span>eye color</span>
+      <span>{{people.eye_color}}</span>
+    </div>
+
+    <div class="card__name" style="text-transform: none">
+      <img src="{{swapiService.images.planets+getId(people.homeworld)+'.jpg'}}"
+
+           style="display: block;width: 150px;min-height: 150px;background-color: #2d2f48"
+           routerLink="/swapi/planets/{{getId(people.homeworld)}}"
+      >
+
+    </div>
+
+
+  </div>
+
+
+  <div class="card__image"
+       [ngStyle]="{'background-image': 'url(' + people.image + ')'}"
+       routerLink="/swapi/people/{{people.id}}"
+  ></div>
+
+</div>

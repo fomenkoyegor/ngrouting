@@ -1,0 +1,11 @@
+<div class="page person-page">
+  <ng-container *ngIf="item$ | async as item;else loader">
+    <app-item [item]="item" class="person"></app-item>
+  </ng-container>
+
+  <ng-template #loader>
+    <app-loader></app-loader>
+  </ng-template>
+
+
+</div>

@@ -1,0 +1,8 @@
+<div class="new">
+  <h2>{{item.author}} by <a href="{{item.url}}" target="_blank">{{item.source.name}}</a></h2>
+  <h3>{{item.title}}</h3>
+  <div class="img" [ngStyle]="{'background-image': 'url(' + item.urlToImage + ')'}"></div>
+  <h4>{{item.description}}</h4>
+  <h6>{{item.content}}</h6>
+  <p style="color: var(--color-active)">{{item.publishedAt|date}}</p>
+</div>

@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./style/scroll";
+
+:root{
+  --dark:#1c313a;
+  --dark2:#212121;
+  --dark3:#37474f;
+  --light:#718792;
+  --color-ligth:#cfd8dc;
+  --color-active:#81d4fa;
+  --color-active2:#f50057;
+  --color-active-link: #d500f9;
+  --color-opaciti-dark:rgba(0,0,0,0.6);
+  --color-danger:red;
+  --color-alive:#76ff03;
+  --color-paginate:#eceff1;
+  --header:50px;
+  --header-mobile:70px;
+}
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*,html,body{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  user-select: none;
+}
+
+
+body{
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.page-news{
+  padding: 0.4em 0.4em 0.4em 1em;
+
+}

@@ -1,0 +1,6 @@
+.page-index{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: calc(100vh - var(--header));
+  background-color: var(--dark3);
+}

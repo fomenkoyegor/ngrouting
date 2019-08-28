@@ -1,0 +1,15 @@
+.new-item{
+  padding: 1em;
+  text-align: center;
+  background-color: var(--color-ligth);
+  margin: .1em 0;
+  cursor: pointer;
+  &.active,&:hover{
+    background-color: var(--dark);
+    color: var(--color-ligth);
+    box-shadow: inset 10px 10px 51px 1px rgba(0,0,0,0.85);
+  }
+  &.active h4{
+    color: var(--color-active);
+  }
+}

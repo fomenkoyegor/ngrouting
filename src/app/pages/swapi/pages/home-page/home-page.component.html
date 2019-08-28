@@ -1,0 +1,63 @@
+<div class="page page-home">
+
+  <div class="people cards">
+    <ng-container *ngIf="people$ | async as people;else loaderp">
+      <div class="card"
+           [ngStyle]="{'background-image': 'url(' + people.image + ')'}"
+      >
+        <div class="name"
+             routerLink="/swapi/people/{{people.id}}"
+        >
+          {{people.name}}
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #loaderp>
+      <div class="card">
+        <app-loader></app-loader>
+      </div>
+    </ng-template>
+  </div>
+
+
+  <div class="starship cards">
+    <ng-container *ngIf="starship$ | async as starship;else loaders">
+      <div class="card"
+           [ngStyle]="{'background-image': 'url(' + starship.image + ')'}"
+      >
+        <div class="name"
+             routerLink="/swapi/starships/{{starship.id}}"
+        >
+          {{starship.name}}
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #loaders>
+      <div class="card">
+        <app-loader></app-loader>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="planet cards">
+    <ng-container *ngIf="planets$ | async as planet;else loaderpl">
+      <div class="card"
+           [ngStyle]="{'background-image': 'url(' + planet.image + ')'}"
+      >
+        <div class="name"
+             *ngIf="planet.name"
+             routerLink="/swapi/planets/{{planet.id}}"
+        >
+          {{planet.name}}
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #loaderpl></ng-template>
+  </div>
+
+
+
+
+
+</div>

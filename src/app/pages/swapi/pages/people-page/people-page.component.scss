@@ -1,0 +1,34 @@
+.page-people{
+  width: 100%;
+  height: calc(100vh - var(--header));
+  border: 1px solid;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 1em;
+  grid-gap: 1em;
+  @media screen and  (max-width: 950px){
+    &{
+      grid-template-columns: repeat(3,1fr);
+    }
+  }
+
+  @media screen and  (max-width: 800px){
+    &{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media screen and  (max-width: 400px){
+    &{
+      grid-template-columns: repeat(1,1fr);
+    }
+  }
+}
+
+app-loader{
+  position: fixed;
+  left: 50%;
+}
+
+
